@@ -80,6 +80,9 @@ M = [
     ("volume: garbage not rejected", "t_volume_garbage_ignored", [
         ("lib.sh", "    case \"$v\" in ''|*[!0-9]*) return 1 ;; esac\n", "    [ -n \"$v\" ] || return 1\n"),
     ]),
+    ("svc: pending sleep outlives the stop", "t_stop_leaves_nothing", [
+        ("soloist-svc.sh", '    end_nap\n    log "stopping"', '    log "stopping"'),
+    ]),
     # Not a mutant: "dead aplay not reaped" (Codex) does not reproduce - busybox
     # ash 1.35 collects finished background jobs itself; t_gate_reaps_aplay stays
     # green without reap_aplay and is kept only as a regression guard.

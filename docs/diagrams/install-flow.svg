@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 590">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+    text { font-family: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', 'DejaVu Sans Mono', monospace; }
+    .n { fill: #ffffff; font-size: 11px; font-weight: 600; }
+    .s { fill: #94a3b8; font-size: 9px; }
+    .w { fill: #fda4af; font-size: 9px; }
+    .l { font-size: 7.5px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/>
+    </marker>
+    <marker id="arrow-rose" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/>
+    </marker>
+  </defs>
+
+  <!-- 1. background -->
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- 2. regions -->
+  <rect x="30" y="76" width="430" height="444" rx="12" fill="none" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="42" y="93" fill="#fbbf24" font-size="9" font-weight="600">КОМПЬЮТЕР · Windows / Linux / macOS, Python 3.8+</text>
+  <rect x="490" y="76" width="480" height="444" rx="12" fill="none" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="502" y="93" fill="#fbbf24" font-size="9" font-weight="600">КОЛОНКА · install.sh, всё до шага 2 ничего не меняет</text>
+
+  <!-- 3. arrows -->
+  <line x1="147" y1="166" x2="147" y2="204" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="342" y1="166" x2="342" y2="204" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="245" y1="278" x2="245" y2="316" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="245" y1="378" x2="245" y2="416" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 430 454 L 475 454 L 475 143 L 518 143" fill="none" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+  <text x="471" y="300" fill="#22d3ee" font-size="8" font-weight="600" text-anchor="middle" transform="rotate(-90 471 300)">ADB по Wi-Fi</text>
+  <line x1="655" y1="176" x2="655" y2="204" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="655" y1="266" x2="655" y2="294" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="655" y1="356" x2="655" y2="384" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="655" y1="446" x2="655" y2="464" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="790" y1="236" x2="828" y2="236" stroke="#fb7185" stroke-width="1.5" marker-end="url(#arrow-rose)"/>
+  <line x1="790" y1="326" x2="828" y2="326" stroke="#fb7185" stroke-width="1.5" marker-end="url(#arrow-rose)"/>
+  <line x1="790" y1="416" x2="828" y2="416" stroke="#fb7185" stroke-width="1.5" marker-end="url(#arrow-rose)"/>
+  <text x="809" y="230" fill="#fb7185" class="l" text-anchor="middle">сбой</text>
+  <text x="809" y="320" fill="#fb7185" class="l" text-anchor="middle">сбой</text>
+  <text x="809" y="410" fill="#fb7185" class="l" text-anchor="middle">сбой</text>
+
+  <!-- 4+5+6. components: computer -->
+  <rect x="60" y="110" width="175" height="56" rx="6" fill="#0f172a"/>
+  <rect x="60" y="110" width="175" height="56" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="147" y="134" class="n" text-anchor="middle">deb.debian.org</text>
+  <text x="147" y="151" class="s" text-anchor="middle">trixie armhf, ~130 .deb</text>
+
+  <rect x="255" y="110" width="175" height="56" rx="6" fill="#0f172a"/>
+  <rect x="255" y="110" width="175" height="56" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="342" y="134" class="n" text-anchor="middle">CDN Spotify</text>
+  <text x="342" y="151" class="s" text-anchor="middle">Soloist (не в репо)</text>
+
+  <rect x="60" y="206" width="370" height="72" rx="6" fill="#0f172a"/>
+  <rect x="60" y="206" width="370" height="72" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="245" y="230" class="n" text-anchor="middle">build/build-kit.py</text>
+  <text x="245" y="247" class="s" text-anchor="middle">зависимости → SHA256 → ELF NEEDED → нужные .so</text>
+  <text x="245" y="263" class="w" text-anchor="middle">не хватает библиотеки → сборка останавливается</text>
+
+  <rect x="60" y="318" width="370" height="60" rx="6" fill="#0f172a"/>
+  <rect x="60" y="318" width="370" height="60" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="245" y="342" class="n" text-anchor="middle">kit/ · ~40 МБ</text>
+  <text x="245" y="359" class="s" text-anchor="middle">lib/ glibc 2.41, Soloist, скрипты, MANIFEST.sha256</text>
+
+  <rect x="60" y="418" width="370" height="72" rx="6" fill="#0f172a"/>
+  <rect x="60" y="418" width="370" height="72" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="245" y="442" class="n" text-anchor="middle">deploy.py</text>
+  <text x="245" y="459" class="s" text-anchor="middle">root, место, busybox; совпавшие файлы — ссылки</text>
+  <text x="245" y="475" class="s" text-anchor="middle">ключ → etc/api.key (600), в вывод не попадает</text>
+
+  <!-- components: speaker -->
+  <rect x="520" y="110" width="270" height="66" rx="6" fill="#0f172a"/>
+  <rect x="520" y="110" width="270" height="66" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="655" y="133" class="n" text-anchor="middle">1. Проверки</text>
+  <text x="655" y="149" class="s" text-anchor="middle">MANIFEST, пробный --version</text>
+  <text x="655" y="165" class="w" text-anchor="middle">сбой → выход, колонка не тронута</text>
+
+  <rect x="520" y="206" width="270" height="60" rx="6" fill="#0f172a"/>
+  <rect x="520" y="206" width="270" height="60" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="655" y="230" class="n" text-anchor="middle">2. Стоп старой версии</text>
+  <text x="655" y="247" class="s" text-anchor="middle">перенос ключа, настроек, входа</text>
+
+  <rect x="520" y="296" width="270" height="60" rx="6" fill="#0f172a"/>
+  <rect x="520" y="296" width="270" height="60" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="655" y="320" class="n" text-anchor="middle">3. Каталог + S97soloist</text>
+  <text x="655" y="337" class="s" text-anchor="middle">rootfs: rw → копия → cmp → ro</text>
+
+  <rect x="520" y="386" width="270" height="60" rx="6" fill="#0f172a"/>
+  <rect x="520" y="386" width="270" height="60" rx="6" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="655" y="410" class="n" text-anchor="middle">4. Запуск службы</text>
+  <text x="655" y="427" class="s" text-anchor="middle">процессы живы 5 с</text>
+
+  <rect x="520" y="466" width="270" height="42" rx="6" fill="#0f172a"/>
+  <rect x="520" y="466" width="270" height="42" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="655" y="483" class="n" text-anchor="middle">Spotify: «Станция Лайт»</text>
+  <text x="655" y="498" class="s" text-anchor="middle">вход проверяется в приложении</text>
+
+  <rect x="830" y="206" width="120" height="240" rx="6" fill="#0f172a"/>
+  <rect x="830" y="206" width="120" height="240" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="890" y="232" class="n" text-anchor="middle">Откат</text>
+  <text x="890" y="256" class="s" text-anchor="middle">старый каталог</text>
+  <text x="890" y="271" class="s" text-anchor="middle">старый init</text>
+  <text x="890" y="286" class="s" text-anchor="middle">rootfs снова ro</text>
+  <text x="890" y="301" class="s" text-anchor="middle">старая версия</text>
+  <text x="890" y="316" class="s" text-anchor="middle">запущена</text>
+  <text x="890" y="350" class="w" text-anchor="middle">не удалось →</text>
+  <text x="890" y="365" class="w" text-anchor="middle">«rollback</text>
+  <text x="890" y="380" class="w" text-anchor="middle">INCOMPLETE»,</text>
+  <text x="890" y="395" class="w" text-anchor="middle">код выхода 2</text>
+
+  <!-- 7. legend -->
+  <g font-size="8.5">
+    <rect x="30" y="546" width="10" height="10" rx="2" fill="rgba(30,41,59,0.5)" stroke="#94a3b8"/>
+    <text x="46" y="555" fill="#94a3b8">внешнее / результат</text>
+    <rect x="190" y="546" width="10" height="10" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399"/>
+    <text x="206" y="555" fill="#94a3b8">скрипт</text>
+    <rect x="270" y="546" width="10" height="10" rx="2" fill="rgba(76,29,149,0.4)" stroke="#a78bfa"/>
+    <text x="286" y="555" fill="#94a3b8">данные</text>
+    <rect x="350" y="546" width="10" height="10" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee"/>
+    <text x="366" y="555" fill="#94a3b8">компьютер → колонка</text>
+    <rect x="520" y="546" width="10" height="10" rx="2" fill="rgba(59,130,246,0.3)" stroke="#60a5fa"/>
+    <text x="536" y="555" fill="#94a3b8">служба запущена</text>
+    <rect x="670" y="546" width="10" height="10" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185"/>
+    <text x="686" y="555" fill="#94a3b8">ошибка и откат</text>
+  </g>
+
+  <!-- 8. title -->
+  <text x="30" y="38" fill="#ffffff" font-size="16" font-weight="700">Как ставится комплект</text>
+  <text x="30" y="58" fill="#94a3b8" font-size="9">сборка на компьютере → установка по ADB → откат при любой ошибке после остановки старой версии</text>
+</svg>

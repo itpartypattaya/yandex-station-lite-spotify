@@ -1,0 +1,10 @@
+# build output and downloads (Debian packages, Soloist archive)
+kit/
+*.deb
+soloist-*.tar.gz
+# the Soloist API key must never be committed
+*.key
+api.key
+soloist.conf
+__pycache__/
+*.pyc

@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 520">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+    text { font-family: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', 'DejaVu Sans Mono', monospace; }
+    .n { fill: #ffffff; font-size: 11px; font-weight: 600; }
+    .s { fill: #94a3b8; font-size: 9px; }
+    .l { font-size: 7.5px; font-weight: 600; }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#60a5fa"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fb923c"/>
+    </marker>
+  </defs>
+
+  <!-- 1. background -->
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- 2. regions -->
+  <rect x="230" y="60" width="630" height="370" rx="12" fill="none" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="244" y="78" fill="#fbbf24" font-size="9" font-weight="600">КОМПЛЕКТ /bkupgrade/data/local/opt/soloist · служба soloist-svc.sh (S97soloist)</text>
+  <text x="244" y="93" fill="#94a3b8" font-size="8">сеть → снять 169.254 с p2p0 → cp15_barrier=2 → tmpfs-кэш 12 МБ → PulseAudio → Soloist; упавшее перезапускает</text>
+  <rect x="870" y="60" width="230" height="370" rx="12" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="884" y="78" fill="#94a3b8" font-size="9" font-weight="600">СИСТЕМА КОЛОНКИ (Яндекс)</text>
+
+  <!-- 3. connections -->
+  <!-- control: voice -->
+  <line x1="210" y1="138" x2="258" y2="138" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <line x1="320" y1="166" x2="320" y2="248" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <text x="326" y="212" fill="#fb923c" class="l">ctl play/pause</text>
+  <!-- control: volume -->
+  <line x1="890" y1="138" x2="642" y2="138" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <text x="765" y="131" fill="#fb923c" class="l" text-anchor="middle">читает раз в секунду</text>
+  <path d="M 555 166 L 555 222 L 390 222 L 390 248" fill="none" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <text x="472" y="216" fill="#fb923c" class="l" text-anchor="middle">ctl volume 0–100</text>
+  <!-- Spotify Connect -->
+  <line x1="210" y1="282" x2="258" y2="282" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- audio path -->
+  <line x1="430" y1="282" x2="468" y2="282" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="449" y="275" fill="#60a5fa" class="l" text-anchor="middle">звук</text>
+  <line x1="640" y1="282" x2="678" y2="282" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="659" y="275" fill="#60a5fa" class="l" text-anchor="middle">FIFO</text>
+  <line x1="830" y1="282" x2="888" y2="282" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="845" y="275" fill="#60a5fa" class="l" text-anchor="middle">PCM</text>
+  <line x1="985" y1="310" x2="985" y2="348" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <path d="M 1080 138 L 1092 138 L 1092 376 L 1082 376" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-blue)"/>
+  <!-- private runtime -->
+  <line x1="345" y1="350" x2="345" y2="316" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="555" y1="350" x2="555" y2="316" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- 4+5+6. components: outside -->
+  <rect x="30" y="110" width="180" height="56" rx="6" fill="#0f172a"/>
+  <rect x="30" y="110" width="180" height="56" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="120" y="134" class="n" text-anchor="middle">Quasar Bridge</text>
+  <text x="120" y="151" class="s" text-anchor="middle">/tmp/quasar-conv.jsonl</text>
+
+  <rect x="30" y="254" width="180" height="56" rx="6" fill="#0f172a"/>
+  <rect x="30" y="254" width="180" height="56" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="120" y="278" class="n" text-anchor="middle">Приложение Spotify</text>
+  <text x="120" y="295" class="s" text-anchor="middle">Spotify Connect</text>
+
+  <!-- components: kit -->
+  <rect x="260" y="110" width="170" height="56" rx="6" fill="#0f172a"/>
+  <rect x="260" y="110" width="170" height="56" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="345" y="134" class="n" text-anchor="middle">spotify-voice.sh</text>
+  <text x="345" y="151" class="s" text-anchor="middle">«пауза в спотифай»</text>
+
+  <rect x="470" y="110" width="170" height="56" rx="6" fill="#0f172a"/>
+  <rect x="470" y="110" width="170" height="56" rx="6" fill="rgba(251,146,60,0.3)" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="555" y="134" class="n" text-anchor="middle">volume-sync.sh</text>
+  <text x="555" y="151" class="s" text-anchor="middle">Алиса 0–20 → 0–100</text>
+
+  <rect x="260" y="250" width="170" height="64" rx="6" fill="#0f172a"/>
+  <rect x="260" y="250" width="170" height="64" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="345" y="274" class="n" text-anchor="middle">Spotify Soloist</text>
+  <text x="345" y="290" class="s" text-anchor="middle">bin/soloist 1.3.10</text>
+  <text x="345" y="304" class="s" text-anchor="middle">кэш в tmpfs</text>
+
+  <rect x="470" y="250" width="170" height="64" rx="6" fill="#0f172a"/>
+  <rect x="470" y="250" width="170" height="64" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="555" y="274" class="n" text-anchor="middle">PulseAudio 17</text>
+  <text x="555" y="290" class="s" text-anchor="middle">module-pipe-sink</text>
+  <text x="555" y="304" class="s" text-anchor="middle">пишет в FIFO</text>
+
+  <rect x="680" y="250" width="150" height="64" rx="6" fill="#0f172a"/>
+  <rect x="680" y="250" width="150" height="64" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="755" y="274" class="n" text-anchor="middle">audio-gate.sh</text>
+  <text x="755" y="290" class="s" text-anchor="middle">aplay открыт, только</text>
+  <text x="755" y="304" class="s" text-anchor="middle">пока играет музыка</text>
+
+  <rect x="260" y="352" width="380" height="58" rx="6" fill="#0f172a"/>
+  <rect x="260" y="352" width="380" height="58" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="450" y="375" class="n" text-anchor="middle">lib/ · glibc 2.41 из Debian trixie</text>
+  <text x="450" y="392" class="s" text-anchor="middle">через ld-linux-armhf.so.3 --library-path lib;</text>
+  <text x="450" y="404" class="s" text-anchor="middle">программы Яндекса её не видят (у них glibc 2.30)</text>
+
+  <!-- components: system -->
+  <rect x="890" y="110" width="190" height="56" rx="6" fill="#0f172a"/>
+  <rect x="890" y="110" width="190" height="56" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="985" y="134" class="n" text-anchor="middle">Алиса (maind)</text>
+  <text x="985" y="151" class="s" text-anchor="middle">last_vendor_volume</text>
+
+  <rect x="890" y="254" width="190" height="56" rx="6" fill="#0f172a"/>
+  <rect x="890" y="254" width="190" height="56" rx="6" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="985" y="278" class="n" text-anchor="middle">/usr/bin/aplay</text>
+  <text x="985" y="295" class="s" text-anchor="middle">родной, softvol Master</text>
+
+  <rect x="890" y="350" width="190" height="56" rx="6" fill="#0f172a"/>
+  <rect x="890" y="350" width="190" height="56" rx="6" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="985" y="374" class="n" text-anchor="middle">dmix → динамик</text>
+  <text x="985" y="391" class="s" text-anchor="middle">музыка и голос вместе</text>
+
+  <!-- 7. legend -->
+  <g font-size="8.5">
+    <line x1="30" y1="466" x2="56" y2="466" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="64" y="469" fill="#94a3b8">звук</text>
+    <line x1="120" y1="466" x2="146" y2="466" stroke="#fb923c" stroke-width="1.5"/>
+    <text x="154" y="469" fill="#94a3b8">управление (soloist ctl)</text>
+    <rect x="320" y="461" width="10" height="10" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399"/>
+    <text x="336" y="469" fill="#94a3b8">процессы службы</text>
+    <rect x="470" y="461" width="10" height="10" rx="2" fill="rgba(76,29,149,0.4)" stroke="#a78bfa"/>
+    <text x="486" y="469" fill="#94a3b8">свой рантайм</text>
+    <line x1="610" y1="466" x2="636" y2="466" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="644" y="469" fill="#94a3b8">голос Алисы</text>
+    <rect x="740" y="461" width="10" height="10" rx="2" fill="rgba(30,41,59,0.5)" stroke="#94a3b8"/>
+    <text x="756" y="469" fill="#94a3b8">не из комплекта, не меняется</text>
+  </g>
+
+  <!-- 8. title -->
+  <text x="30" y="30" fill="#ffffff" font-size="16" font-weight="700">Что работает на колонке</text>
+  <text x="30" y="48" fill="#94a3b8" font-size="9">Soloist играет через PulseAudio в родной aplay — тот же выход, что у Алисы</text>
+</svg>
